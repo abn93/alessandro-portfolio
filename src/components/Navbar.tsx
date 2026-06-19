@@ -1,38 +1,92 @@
-import React from 'react';
+import React, { useState } from 'react';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+const navItems: NavItem[] = [
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#technologies' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Contact', href: '#contact' },
+];
 
 const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 py-4 px-6">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo / Nome */}
-        <a href="#home" className="text-xl font-bold text-gray-800">
-          Alessandro
-        </a>
+    <nav className="fixed top-0 left-0 w-full bg-[#030514] text-white shadow-lg z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <img src="/images/AN.PNG" alt="Alessandro Nascimento" className="h-12 w-auto" />
 
-        {/* Links do menu - versão desktop */}
-        <ul className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
-          <li><a href="#home" className="hover:text-blue-600 transition">Home</a></li>
-          <li><a href="#about" className="hover:text-blue-600 transition">About</a></li>
-          <li><a href="#projects" className="hover:text-blue-600 transition">Projects</a></li>
-          <li><a href="#technologies" className="hover:text-blue-600 transition">Skills</a></li>
-          <li><a href="#experience" className="hover:text-blue-600 transition">Experience</a></li>
-          <li><a href="#contact" className="hover:text-blue-600 transition">Contact</a></li>
-        </ul>
+          {/* Links - Desktop */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="hover:text-[#625AFB] transition-colors duration-200"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
 
-        {/* Botão Download CV */}
-        <div className="flex items-center gap-4">
-          <a
-            href="/cv.pdf" // Substitua pelo caminho real do seu CV
-            download
-            className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition"
-          >
-            Download CV
-          </a>
+          <div className="flex items-center space-x-4">
 
-          {/* Menu hambúrguer (mobile) - opcional */}
-          <button className="md:hidden text-gray-700 text-2xl focus:outline-none">
-            ☰
-          </button>
+            <a href="https://github.com/abn93" target="_blank" rel="noopener noreferrer">
+              <GitHubIcon />
+            </a>
+
+            <a
+              href="/cv.pdf"
+              download
+              className="hidden md:inline-block bg-[#3D1F6D] hover:bg-[#4A2C7A] px-4 py-2 rounded-lg text-sm font-medium text-white transition shadow-md hover:shadow-lg"
+            >
+            
+              Download CV
+            </a>
+
+            {/* Botão hambúrguer (mobile) */}
+            <button
+              onClick={toggleMenu}
+              className="md:hidden text-gray-300 hover:text-white focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </nav>
