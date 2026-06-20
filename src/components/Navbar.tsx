@@ -19,13 +19,11 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-[#030514] text-white shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <img src="/images/AN.PNG" alt="Alessandro Nascimento" className="h-12 w-auto" />
 
           <div className="hidden md:flex items-center space-x-8">

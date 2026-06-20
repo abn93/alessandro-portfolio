@@ -4,7 +4,6 @@ const Header: React.FC = () => {
   return (
     <header id="home" className="flex items-center justify-center min-h-screen px-4 bg-[#030514] pt-20">
       <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Coluna da esquerda - informações */}
         <div className="text-center lg:text-left">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Alessandro Nascimento
@@ -32,7 +31,6 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Coluna da direita - foto */}
         <div className="flex justify-center lg:justify-end">
           <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] max-w-full rounded-full overflow-hidden shadow-xl shadow-[#7C3AED]/30">
             <img
