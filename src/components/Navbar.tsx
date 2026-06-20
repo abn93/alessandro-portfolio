@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import {GitHubLight} from 'developer-icons';
 
 interface NavItem {
   label: string;
@@ -8,9 +8,9 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
+  { label: 'About', href: '#about-skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#technologies' },
+  { label: 'Skills', href: '#about-skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -28,7 +28,6 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <img src="/images/AN.PNG" alt="Alessandro Nascimento" className="h-12 w-auto" />
 
-          {/* Links - Desktop */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -44,7 +43,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center space-x-4">
 
             <a href="https://github.com/abn93" target="_blank" rel="noopener noreferrer">
-              <GitHubIcon />
+            <GitHubLight size={32} />
             </a>
 
             <a
@@ -56,7 +55,6 @@ const Navbar: React.FC = () => {
               Download CV
             </a>
 
-            {/* Botão hambúrguer (mobile) */}
             <button
               onClick={toggleMenu}
               className="md:hidden text-gray-300 hover:text-white focus:outline-none"
