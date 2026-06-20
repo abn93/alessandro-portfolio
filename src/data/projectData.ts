@@ -5,6 +5,7 @@ export interface Project {
   techs: string[];
   demoLink: string;
   githubLink: string;
+  image: string;
 }
 
 export const projects: Project[] = [
@@ -15,5 +16,6 @@ export const projects: Project[] = [
     techs: ['React', 'Django', 'Heroku', 'Tailwind CSS', 'PostgreSQL'],
     demoLink: 'https://clubgvs.com.br/',
     githubLink: '#',
+    image: '/images/clubgvs.png',
   },
 ];
