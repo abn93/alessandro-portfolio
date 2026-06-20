@@ -10,26 +10,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Dashboard Analytics',
-    description: 'Responsive dashboard with metrics, charts, and dynamic filters.',
-    techs: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    demoLink: '#',
-    githubLink: '#',
-  },
-  {
-    id: 2,
-    title: 'Task Manager',
-    description: 'Task management application with authentication and categories.',
-    techs: ['React', 'Node.js', 'MongoDB'],
-    demoLink: '#',
-    githubLink: '#',
-  },
-  {
-    id: 3,
-    title: 'E-Commerce',
-    description: 'Complete online store with cart, payments, and admin panel.',
-    techs: ['Next.js', 'Stripe', 'PostgreSQL'],
-    demoLink: '#',
+    title: 'Club GVS',
+    description: 'Official website for Club GVS – a modern platform for members.',
+    techs: ['React', 'Django', 'Heroku', 'Tailwind CSS', 'PostgreSQL'],
+    demoLink: 'https://clubgvs.com.br/',
     githubLink: '#',
   },
 ];
