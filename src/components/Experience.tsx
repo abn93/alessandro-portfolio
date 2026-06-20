@@ -8,9 +8,7 @@ const Experience: React.FC = () => {
           Experience
         </h2>
 
-        {/* ========== EXPERIÊNCIAS ========== */}
         <div className="space-y-8 mb-12">
-          {/* Experiência 1 – CLUB GVS */}
           <div className="bg-[#1A1A2E] border border-[#7C3AED]/30 rounded-lg p-6 shadow-lg hover:shadow-[#7C3AED]/20 hover:shadow-xl transition-all duration-300">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
               <div>
@@ -64,7 +62,6 @@ const Experience: React.FC = () => {
             </ul>
           </div>
 
-          {/* Experiência 2 – FPF TECH */}
           <div className="bg-[#1A1A2E] border border-[#7C3AED]/30 rounded-lg p-6 shadow-lg hover:shadow-[#7C3AED]/20 hover:shadow-xl transition-all duration-300">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
               <div>
@@ -134,7 +131,6 @@ const Experience: React.FC = () => {
           </div>
         </div>
 
-        {/* ========== EDUCAÇÃO ========== */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-white text-center mb-6">Education</h3>
           <div className="bg-[#1A1A2E] border border-[#7C3AED]/30 rounded-lg p-6 shadow-lg">
@@ -165,7 +161,6 @@ const Experience: React.FC = () => {
           </div>
         </div>
 
-        {/* ========== CURSOS / CERTIFICAÇÕES ========== */}
         <div>
           <h3 className="text-2xl font-bold text-white text-center mb-6">Certifications & Training</h3>
           <div className="bg-[#1A1A2E] border border-[#7C3AED]/30 rounded-lg p-6 shadow-lg">
